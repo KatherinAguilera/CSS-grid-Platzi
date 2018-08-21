@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<htmllang="es">
+<head>
+    <metacharset="UTF-8">
+    <metaname="viewport"content="width=device-width, initial-scale=1.0">
+    <metahttp-equiv="X-UA-Compatible"content="ie=edge">
+    <title>row-size</title>
+
+    <style>
+        *{
+            font-family: arial;
+        color:black;
+        }
+        
+        .container{
+            display:grid;
+            grid-gap: 4px;
+            grid-template-columns: repeat(7,1fr);
+            grid-template-rows: repeat(4,1fr);
+            height: 100vh;
+        }
+
+        .item{
+            border:1px solid #c9c9c9 ;
+            padding:10px;
+            display: flex;
+            border-radius: 5px;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .item:nth-child(1){
+            background-color: yellow;
+            grid-column: 1 / -1;
+            grid-row: 1 / span 2;
+        }
+
+        .item:nth-child(2){
+            background-color: red;
+            grid-column: 1 / span 3;
+            grid-row: 3 / span 2;
+        }
+
+        .item:nth-child(3){
+            background-color: blue;
+            grid-column: 4 / span 2;
+            grid-row: 3 / span 2;
+        }
+
+        .item:nth-child(4){
+            background-color: green;
+            grid-column: 6 / span 2;
+            grid-row: 3 / span 1;
+        }
+
+        .item:nth-child(5){
+            background-color: gray;
+            grid-column: 6 / span 1;
+            grid-row: 4 / span 1;
+        }
+
+        .item:nth-child(6){
+            background-color: brown;
+            grid-column: 7 / span 1;
+            grid-row: 3 / span
+        }
+    </style>
+   
+</head>
+<body>
+<section class="container">
+<div class="item">item #1</div>
+<div class="item">item #2</div>
+<div class="item">item #3</div>
+<div class="item">item #4</div>
+<div class="item">item #5</div>
+<div class="item">item #6</div>
+</section>
+</body>
+</html>
