@@ -10,14 +10,10 @@ img{
 }
 .container {
   display: grid;
-  /* grid-template: 100% 1fr / 20% 1fr; */
-    grid-template: auto 1fr / 8% 1fr;
-  /*grid-gap: filas columnas;*/
-  /* grid-gap: 10px; */
-
+  grid-template: auto 1fr / 8% 1fr;
   grid-template-areas: "header header"
-                       "menu animes"
-                    ;
+                       "menu animes";
+   height: 100vh;
 }
 .header{
   display: grid;
@@ -54,7 +50,7 @@ min-width: 50px;
   box-sizing: border-box;
 }
 .profile{
-grid-area: profile;
+  grid-area: profile;
   display: flex;
   align-items: center;
   justify-content: flex-end;
@@ -65,43 +61,51 @@ border-radius: 50%;
 max-width: 60px;
 max-height: 60px;
 margin: 10px;
-border: 2px solid #FE9E0C;
+border: 2px solid #ff595c;
+}
+.profile span{
+  font-weight: 300;
 }
 .menu{
-  grid-area: menu;
-   margin: 0;
-  background: #ff595c;
-  height: 100vh;
+
   /* display: flex;
   flex-direction: column;
   justify-content: space-between; */
 }
 li{
   list-style:none;
+  margin: 0;
 }
-li .fas{
-  margin-bottom: 10px;
-}
-.menu ul li {
-  /* text-decoration: none;
-  color: white;
+.menu{
   display: flex;
-  flex-direction: column;*/
-  font-size: 15px;
+  flex-direction: column;
+  justify-content: space-around;
   text-align: center;
-  padding-top: 25px;
-  padding-left: 0;
+  grid-area: menu;
+   margin: 0;
+  background: #ff595c;
 }
-.menu ul{
-  margin-left: -39px;
-}
-.menu a{
+/* .menu a:hover{
+
+  background: rgba(255,255,255, 5.);
+} */
+.menu a {
   text-decoration: none;
   color: white;
   font-weight: bold;
 }
-
-.fa-home, .fa-bolt, .fa-heart, .fa-cogs{
+.menu .items a{
+  padding-bottom: 12px;
+}
+.menu  .items i:hover, .item-ajuste i:hover{
+  transform: scale(1.5);
+  transition: .3s;
+}
+.it{
+  font-size: 14px;
+  margin-top: 8px;
+}
+.fa-home, .fa-bolt, .fa-heart, .fa-cogs, .fa-comment-dots{
   color: white;
   font-size: 30px;
 }
@@ -120,7 +124,7 @@ figure{
   padding: 0;
 }
 a:hover  figcaption {
-  background: rgba(255,255,255, .3);
+  background: rgba(252,113,109, .8);
   position: absolute;
   bottom: 0;
   height: 80%;
@@ -129,7 +133,8 @@ a:hover  figcaption {
   text-align: left;
   padding: 0 15px;
   display: block;
-
+  font-weight: 400;
+  transition: .3s;
 }
 .ver figcaption{
   display: none;
@@ -137,10 +142,25 @@ a:hover  figcaption {
 .ver{
   position: relative;
 }
+h3{
+  padding: 20px 40px 0;
+  font-weight: 700;
+}
+h4{
+margin-top: 10px;
+margin-bottom: 0;
+font-size: 20px;
+}
+figcaption p{
+  font-size: 15px;
+}
 .animes img {
     width: 100%;
     vertical-align: top;
-    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.33);
+    border-radius: 21px 0px 22px 0px;
+   -moz-border-radius: 21px 0px 22px 0px;
+   -webkit-border-radius: 21px 0px 22px 0px;
+    border: 0px solid #000000;
 }
 .fa-angle-down{
   color: #ff595c;
@@ -148,4 +168,50 @@ a:hover  figcaption {
 }
 .fa-home, a{
   display: block;
+}
+
+@media screen and (max-width: 768px){
+  .container {
+    display: grid;
+    grid-template: auto 1fr / 12% 1fr;
+    grid-template-areas: "header header"
+                         "menu animes";
+     height: 100vh;
+  }
+  .header{
+    display: grid;
+    grid-template-areas: "logo profile"
+    "search search ";
+    grid-template-rows: 2;
+    grid-template-columns: 1fr 1fr;
+  }
+  .search input{
+
+  }
+  .search{
+    display: flex;
+    justify-content: center;
+    margin: -10px 20px 15px 20px;
+  }
+  .animes{
+    grid-area: animes;
+    display: grid;
+    grid-template-columns:1fr;
+    grid-gap: 10px
+    padding: 0 40px;
+  }
+  .menu{
+    justify-content: flex-start;
+
+  }
+  .it {
+    font-size: 12px;
+}
+.items a:nth-child(1){
+
+  margin-top: 1em;
+}
+.item-ajuste{
+  margin-top: 4em;
+}
 }
