@@ -1,0 +1,151 @@
+/* .fas, .fa{
+  color: red;
+} */
+body{
+  margin: 0;
+  font-family: 'Comfortaa', cursive;
+}
+img{
+  max-width: 100%;
+}
+.container {
+  display: grid;
+  /* grid-template: 100% 1fr / 20% 1fr; */
+    grid-template: auto 1fr / 8% 1fr;
+  /*grid-gap: filas columnas;*/
+  /* grid-gap: 10px; */
+
+  grid-template-areas: "header header"
+                       "menu animes"
+                    ;
+}
+.header{
+  display: grid;
+  grid-template-areas: "logo search profile";
+  grid-template-columns: 20% 1fr 25%;
+  grid-area: header;
+  margin: 0;
+  gap:20px;
+  background: white;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0px 5px 5px 0px rgba(0,0,0,0.2);
+  /* grid-column: 1/-1; */
+}
+.logo{
+  grid-area: logo;
+  display: flex;
+  justify-content: flex-start;
+}
+.logo img{
+width: 100%;
+max-width: 70px;
+min-width: 50px;
+}
+.search{
+  grid-area: search;
+}
+.search input{
+  width: 100%;
+  text-decoration: none;
+  padding: 10px 6px;
+  border-radius: 5px;
+  border: 1px solid #a4a4a4;
+  box-sizing: border-box;
+}
+.profile{
+grid-area: profile;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  margin-right: 15px;
+}
+.profile img{
+border-radius: 50%;
+max-width: 60px;
+max-height: 60px;
+margin: 10px;
+border: 2px solid #FE9E0C;
+}
+.menu{
+  grid-area: menu;
+   margin: 0;
+  background: #ff595c;
+  height: 100vh;
+  /* display: flex;
+  flex-direction: column;
+  justify-content: space-between; */
+}
+li{
+  list-style:none;
+}
+li .fas{
+  margin-bottom: 10px;
+}
+.menu ul li {
+  /* text-decoration: none;
+  color: white;
+  display: flex;
+  flex-direction: column;*/
+  font-size: 15px;
+  text-align: center;
+  padding-top: 25px;
+  padding-left: 0;
+}
+.menu ul{
+  margin-left: -39px;
+}
+.menu a{
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+}
+
+.fa-home, .fa-bolt, .fa-heart, .fa-cogs{
+  color: white;
+  font-size: 30px;
+}
+.anime{
+  position: relative;
+}
+.animes{
+  grid-area: animes;
+  display: grid;
+  grid-gap: 10px;
+  grid-template-columns: repeat(3, 1fr);
+  padding: 0 40px;
+}
+figure{
+  margin: 0;
+  padding: 0;
+}
+a:hover  figcaption {
+  background: rgba(255,255,255, .3);
+  position: absolute;
+  bottom: 0;
+  height: 80%;
+  align-items: center;
+  color: white;
+  text-align: left;
+  padding: 0 15px;
+  display: block;
+
+}
+.ver figcaption{
+  display: none;
+}
+.ver{
+  position: relative;
+}
+.animes img {
+    width: 100%;
+    vertical-align: top;
+    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.33);
+}
+.fa-angle-down{
+  color: #ff595c;
+  font-size: 24px;
+}
+.fa-home, a{
+  display: block;
+}
