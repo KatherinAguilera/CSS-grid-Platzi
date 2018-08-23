@@ -1,6 +1,3 @@
-/* .fas, .fa{
-  color: red;
-} */
 body{
   margin: 0;
   font-family: 'Comfortaa', cursive;
@@ -37,6 +34,7 @@ img{
 width: 100%;
 max-width: 70px;
 min-width: 50px;
+margin-left: 10px;
 }
 .search{
   grid-area: search;
@@ -44,10 +42,28 @@ min-width: 50px;
 .search input{
   width: 100%;
   text-decoration: none;
-  padding: 10px 6px;
+  padding: 10px 46px;
   border-radius: 5px;
-  border: 1px solid #a4a4a4;
+  border: 1px solid #ff595c;
   box-sizing: border-box;
+}
+.search input[type=text]{
+  padding-left:40px;
+}
+input[type=search]:focus{
+   border-color:dodgerBlue;
+   box-shadow:0 0 8px 0 #f2dcc4;
+ }
+.search{
+  position:relative;
+}
+
+.search i{
+  position:absolute;
+  left:0;
+  padding:9px 18px;
+  color:#ff595c;
+  transition:.3s;
 }
 .profile{
   grid-area: profile;
@@ -67,16 +83,6 @@ border: 2px solid #ff595c;
   font-weight: 300;
 }
 .menu{
-
-  /* display: flex;
-  flex-direction: column;
-  justify-content: space-between; */
-}
-li{
-  list-style:none;
-  margin: 0;
-}
-.menu{
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -85,10 +91,6 @@ li{
    margin: 0;
   background: #ff595c;
 }
-/* .menu a:hover{
-
-  background: rgba(255,255,255, 5.);
-} */
 .menu a {
   text-decoration: none;
   color: white;
@@ -134,7 +136,8 @@ a:hover  figcaption {
   padding: 0 15px;
   display: block;
   font-weight: 400;
-  transition: .3s;
+  transition: .5s ease;
+  transform:
 }
 .ver figcaption{
   display: none;
