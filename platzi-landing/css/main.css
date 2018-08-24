@@ -1,0 +1,48 @@
+body{
+  margin: 0;
+
+}
+img{
+  max-width: 100%;
+}
+.container{
+  display: grid;
+  /* gap: 2px; */
+  grid-template-areas: "playlist video video"
+                       "playlist buttons buttons"
+                       "playlist comments viewmore";
+  height: 100vh;
+}
+.playlist{
+  grid-area: playlist;
+padding: 10px;
+border: 1px solid red;
+}
+.friends img{
+border-radius: 50%;
+max-width: 60px;
+max-height: 60px;
+border: 2px solid #ff595c;
+
+}
+.video{
+  grid-area: video;
+
+padding: 10px;
+border: 1px solid red;
+}
+.buttons{
+  grid-area: buttons;
+padding: 10px;
+border: 1px solid red;
+}
+.comments{
+  grid-area: comments;
+padding: 10px;
+border: 1px solid red;
+}
+.viewmore{
+  grid-area: viewmore;
+padding: 10px;
+border: 1px solid red;
+}
